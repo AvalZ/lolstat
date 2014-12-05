@@ -1,0 +1,37 @@
+<%= form_for(@summoner) do |f| %>
+  <% if @summoner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@summoner.errors.count, "error") %> prohibited this summoner from being saved:</h2>
+
+      <ul>
+      <% @summoner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :profileIconId %><br>
+    <%= f.number_field :profileIconId %>
+  </div>
+  <div class="field">
+    <%= f.label :revisionDate %><br>
+    <%= f.number_field :revisionDate %>
+  </div>
+  <div class="field">
+    <%= f.label :summonerLevel %><br>
+    <%= f.number_field :summonerLevel %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

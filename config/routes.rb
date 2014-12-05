@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :summoners
+
 	root 'welcome#index'
   get 'welcome/index'
 
