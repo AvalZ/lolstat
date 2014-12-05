@@ -16,8 +16,7 @@ ActiveRecord::Schema.define(version: 20141205191904) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "summoners", id: false, force: true do |t|
-    t.integer  "id",            limit: 8
+  create_table "summoners", force: true do |t|
     t.string   "name"
     t.integer  "profileIconId", limit: 8
     t.string   "revisionDate"
