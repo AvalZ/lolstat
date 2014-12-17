@@ -40,7 +40,12 @@ gem 'spring',        group: :development
 gem 'rails_12factor',	group: :production
 
 group :development, :test do
-	gem 'rspec-rails'
-	gem 'factory_girl_rails'
 	gem 'faker'
+	gem 'factory_girl_rails'
+
+	gem 'rspec-rails'
+
+	gem 'database_cleaner'
 end
+
+gem 'cucumber-rails', group: :test
